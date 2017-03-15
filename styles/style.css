@@ -2,57 +2,101 @@
 
 
 /* Give the Header element a background color */
-
+header {
+  background-color: pink;
+}
 
 /* Center Everything in Header  and footer */
-
+header, footer {
+  text-align: center;
+}
 
 /* All Text to Helvetica */
-
+body {
+  font-family: Helvetica;
+}
 
 /* All links colors gray*/
-
+a {
+  color: grey;
+}
 
 /* All links hover color red*/
-
+a:hover {
+  color: red;
+}
 
 /* All Links Visted Color black*/
-
+a:visited {
+  color: black;
+}
 
 /*Footer Disclaimer Text to be .5 em*/
-
+#disclaimer {
+  font-size: 0.5em;
+}
 
 /* Remove Bullet Points from Header Navigation Links */
-
+header nav > ul {
+  list-style-type: none;
+}
 
 /* All Post's Comment Links Italicized, Orange and Remove the Underline */
-
+p a[href="#comments"]:last-child {
+  text-decoration: none;
+  font-style: italic;
+  color: orange;
+}
 
 /* All Post's Comment Links Show Underline on Hover */
-
+p a[href="#comments"]:hover:last-child {
+  text-decoration: underline;
+}
 
 /* All Post's Author's Links Bold and Blue, with no Underline */
-
+p a[href] {
+  font-weight: bold;
+  color: blue;
+  text-decoration: none;
+}
 
 /* Article Paragraph Text should have line height of 200%*/
-
+article p {
+  line-height: 200%;
+}
 
 /* The First Letter of each Article be 2em */
-
+article::first-letter {
+  font-size: 2em;
+}
 
 /* The First Image in every Article should have Rounded Corners*/
-
+article img:first-child {
+  border-radius: 20%;
+}
 
 /* The Top-Most Top Cat Should have a Golden Background */
-
+img:first-child {
+  border: solid 0.75em;
+  border-color: gold;
+}
 
 /* The 2nd-Most Top Cat Should have a Silver/gray Background */
-
+img:nth-child(3) {
+  border: solid 0.75em;
+  border-color: silver;
+}
 
 /* The 3rd-Most Top Cat Should have a Bronze/brown Background */
-
+img:nth-child(4) {
+  border: solid 0.75em;
+  border-color: brown;
+}
 
 /* Every other Article's Post-Content Background Color to a Light Grey */
+article section.post-content:nth-child(even) {
+  background-color: lightgrey;
+}
 
 
 /* All Top Kitten's Profile Photos Rounded */

@@ -1,4 +1,5 @@
 /*Without changing anything in the html, add the following styles using advanced selectors*/
+@import url('http://fonts.googleapis.com/css?family=Lobster');
 
 
 /* Give the Header element a background color */
@@ -54,7 +55,7 @@ p a[href="#comments"]:hover:last-child {
 }
 
 /* All Post's Author's Links Bold and Blue, with no Underline */
-p a[href] {
+h3 a[href] {
   font-weight: bold;
   color: blue;
   text-decoration: none;
@@ -76,25 +77,22 @@ article img:first-child {
 }
 
 /* The Top-Most Top Cat Should have a Golden Background */
-img:first-child {
-  border: solid 0.75em;
-  border-color: gold;
+aside section:first-of-type {
+  background-color: gold;
 }
 
 /* The 2nd-Most Top Cat Should have a Silver/gray Background */
-img:nth-child(3) {
-  border: solid 0.75em;
-  border-color: silver;
+aside section:last-of-type {
+  background-color: grey;
 }
 
 /* The 3rd-Most Top Cat Should have a Bronze/brown Background */
-img:nth-child(4) {
-  border: solid 0.75em;
-  border-color: brown;
+aside + section {
+  background-color: brown;
 }
 
 /* Every other Article's Post-Content Background Color to a Light Grey */
-article section.post-content:nth-child(even) {
+article:nth-last-of-type(2n) {
   background-color: lightgrey;
 }
 
@@ -105,9 +103,15 @@ article section.post-content:nth-child(even) {
 /*** BONUS ***/
 
 /* Add a cat emoji before a Cat's Name (in the heading content)*/
-
+h3 a::before {
+  content: "🐯";
+}
 
 /* Top-most Top Cat has a trophy emoji before name */
-
-
+aside>section:first-of-type h3::before {
+  content: "🏆";
+}
 /* Use Google Fonts to Change h1 & h2 fonts to Lobster */
+h1, h2 {
+  font-family: Lobster;
+}
